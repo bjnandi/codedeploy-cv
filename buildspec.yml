@@ -2,11 +2,19 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      nodejs: 10
+
     commands:
       - npm install
-  build:
+
+ pre_build:
     commands:
-      - npm test
-artifacts:
-  files:
-    - '**/*'
+      - echo "test1"
+
+ build:
+      - echo "test2"
+
+  post_build:
+    commands:
+      - echo "test3"
