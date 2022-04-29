@@ -4,15 +4,14 @@ phases:
   install:
     runtime-versions:
       nodejs: 10
-
     commands:
-      - npm install
+      - echo "test0"
 
- pre_build:
+  pre_build:
     commands:
       - echo "test1"
 
- build:
+  build:
       - echo "test2"
 
   post_build:
