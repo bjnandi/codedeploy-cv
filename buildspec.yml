@@ -13,6 +13,8 @@ phases:
 
   build:
       - echo "test2"
+      - echo "test2222"
+      - greep -Fq "test2" index.html
 
   post_build:
     commands:
